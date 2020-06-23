@@ -53,7 +53,7 @@
                       <td><?php echo $row['duration'] ?></td>
                       <td><?php echo $finish_date ?></td>
                       <td class="text-center">
-                        <a href="update-form.php?id=<?php echo $row['id'] ?>" class="btn btn-sm btn-primary">EDIT</a>
+                        <a href="update.php?id=<?php echo $row['id'] ?>" class="btn btn-sm btn-primary">EDIT</a>
                         <a href="delete.php?id=<?php echo $row['id'] ?>" class="btn btn-sm btn-danger">DELETE</a>
                       </td>
                   </tr>
