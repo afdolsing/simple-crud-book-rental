@@ -49,8 +49,8 @@
                       <td><?php echo $no++ ?></td>
                       <td><?php echo $row['title'] ?></td>
                       <td><?php echo $row['customer'] ?></td>
-                      <td><?php echo $row['rental_date'] ?></td>
-                      <td><?php echo $row['duration'] ?></td>
+                      <td><?php echo $row['rental_date']?></td>
+                      <td><?php echo $row['duration']." days" ?></td>
                       <td><?php echo $finish_date ?></td>
                       <td class="text-center">
                         <a href="update.php?id=<?php echo $row['id'] ?>" class="btn btn-sm btn-primary">EDIT</a>
