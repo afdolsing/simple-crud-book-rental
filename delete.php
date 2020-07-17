@@ -2,7 +2,7 @@
     // include ke koneksi database
     include_once('connection.php');
 
-    // ambil id yang akan dihapus
+    // ambil id dari index yang akan dihapus
     $id = $_GET['id'];
     
     // delete data berdasarkan id

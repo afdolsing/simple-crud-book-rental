@@ -40,10 +40,10 @@
                        // ambil data dari tabel rental di database book_rental
                       $query = mysqli_query($connection,"SELECT * FROM tbl_rental");
                       
-                      while($row = mysqli_fetch_array($query)){
+                      while($row = mysqli_fetch_array($query)):
 
                         $finish_date = date('Y-m-d', strtotime($row['rental_date'] . "+ $row[duration] days"));
-                  ?>
+                      ?>
 
                   <tr>
                       <td><?php echo $no++ ?></td>
@@ -57,8 +57,7 @@
                         <a href="delete.php?id=<?php echo $row['id'] ?>" class="btn btn-sm btn-danger">DELETE</a>
                       </td>
                   </tr>
-
-                <?php } ?>
+                <?php endwhile ?>
                 </tbody>
               </table>
             </div>

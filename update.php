@@ -1,5 +1,5 @@
 <?php
-    // include koneksi ke databse
+    // panggil connection.php
     include_once('connection.php');
 
     // ambil data berdasarkan id dari index

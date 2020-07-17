@@ -1,11 +1,11 @@
 <?php
 
-    // include ke koneksi database
+    // panggil connection.php
     include_once('connection.php');
 
     if(isset($_POST['save'])){
-        // get data dari create-form
-        $title = htmlspecialchars($_POST['title']);  // gunakan htmlspecialchar untuk keamanan (sql-injection)
+        // ambil data dari create-form
+        $title = htmlspecialchars($_POST['title']);  // gunakan htmlspecialchar untuk keamanan
         $customer = htmlspecialchars ($_POST['customer']);
         $duration = htmlspecialchars( $_POST['duration']);
 
@@ -13,9 +13,8 @@
         $rental_date = date('Y-m-d');
         
         // insert data ke dalam database 
-        mysqli_query($connection, "INSERT INTO tbl_rental (title, customer, duration, rental_date) VALUE (
-            '$title', '$customer', '$duration', '$rental_date')");
-
+        mysqli_query($connection, "INSERT INTO tbl_rental (title, customer, duration, rental_date) 
+                                          VALUE ('$title', '$customer', '$duration', '$rental_date')");
         // redirect atau kembali ke index
         header('location: index.php');
     }
