@@ -34,13 +34,13 @@
                 <tbody>
                   <?php 
                       // hubungkan include ke file koneksi databse
-                      include('connection.php');
+                      require_once 'connection.php';
                       // nomor urut yang ditampilkan ke layar
                       $no = 1;
                        // ambil data dari tabel rental di database book_rental
-                      $query = mysqli_query($connection,"SELECT * FROM tbl_rental");
+                      $result = mysqli_query($connection,"SELECT * FROM tbl_rental");
                       
-                      while($row = mysqli_fetch_array($query)):
+                      while($row = mysqli_fetch_array($result)):
 
                         $finish_date = date('Y-m-d', strtotime($row['rental_date'] . "+ $row[duration] days"));
                       ?>
@@ -53,6 +53,7 @@
                       <td><?php echo $row['duration']." days" ?></td>
                       <td><?php echo $finish_date ?></td>
                       <td class="text-center">
+                        <!-- kirim id menggunakan query string (?) -->
                         <a href="update.php?id=<?php echo $row['id'] ?>" class="btn btn-sm btn-primary">EDIT</a>
                         <a href="delete.php?id=<?php echo $row['id'] ?>" class="btn btn-sm btn-danger">DELETE</a>
                       </td>

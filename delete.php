@@ -1,11 +1,11 @@
 <?php
-    // include ke koneksi database
-    include_once('connection.php');
+    // akses ke koneksi database
+    require_once 'connection.php';
 
     // ambil id dari index yang akan dihapus
     $id = $_GET['id'];
     
-    // delete data berdasarkan id
+    // hapus data berdasarkan id
     mysqli_query($connection, "DELETE FROM tbl_rental WHERE id = '$id'");
 
     // Redirect atau kembali ke index

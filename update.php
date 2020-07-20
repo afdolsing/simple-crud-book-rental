@@ -1,6 +1,6 @@
 <?php
     // panggil connection.php
-    include_once('connection.php');
+    require_once 'connection.php';
 
     // ambil data berdasarkan id dari index
     $id = $_GET['id'];

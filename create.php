@@ -1,7 +1,7 @@
 <?php
 
     // panggil connection.php
-    include_once('connection.php');
+    require_once 'connection.php';
 
     if(isset($_POST['save'])){
         // ambil data dari create-form

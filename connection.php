@@ -1,5 +1,5 @@
 <?php
-    // deklarasi variabel untuk database
+    // deklarasi variabel
     $server = "localhost";
     $user = "root";
     $password = "";
